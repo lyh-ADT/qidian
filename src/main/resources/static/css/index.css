@@ -17,7 +17,7 @@ a:hover {
 }
 
 .container {
-    width: 1000px;
+    width: 1200px;
 }
 
 .container > .left-side, .container > .center, .container > .right-side {
@@ -34,7 +34,7 @@ a:hover {
 }
 
 .container.head{
-    height: 375px;
+    height: 500px;
 }
 
 /* 分类 */
@@ -76,7 +76,7 @@ a:hover {
     margin: 0;
     width: 99999px;
     transition: all 0.5s;
-    height: 210px;
+    height: auto;
     animation: marginLeft 10.5s infinite;
 }
 
@@ -90,7 +90,7 @@ a:hover {
 }
 
 .marquee ul li img {
-    width: 580px;
+    width: 696px;
 }
 
 @keyframes marginLeft {
@@ -103,19 +103,19 @@ a:hover {
     }
 
     33.3% {
-        margin-left: -580px;
+        margin-left: -696px;
     }
 
     62% {
-        margin-left: -580px;
+        margin-left: -696px;
     }
 
     66.7% {
-        margin-left: -1160px;
+        margin-left: -1392px;
     }
 
     95.2% {
-        margin-left: -1160px;
+        margin-left: -1392px;
     }
 
     100% {
