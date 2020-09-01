@@ -69,14 +69,19 @@ a:hover {
     height: 100%;
     overflow: hidden;
     position: relative;
+    text-align: center;
 }
 
 .marquee ul {
     margin: 0;
     width: 99999px;
     transition: all 0.5s;
-    height: 100%;
+    height: 210px;
     animation: marginLeft 10.5s infinite;
+}
+
+.marquee > img {
+    width: 30%;
 }
 
 .marquee ul li {
