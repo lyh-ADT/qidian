@@ -1,0 +1,137 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+html, body{
+    width: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+.container {
+    width: 1000px;
+}
+
+.container > .left-side, .container > .center, .container > .right-side {
+    float: left;
+}
+
+.container > .left-side, .container > .right-side {
+    width: 20%;
+}
+
+/* 第一部分 */
+.container > .center {
+    width: 58%;
+}
+
+.container.head{
+    height: 375px;
+}
+
+/* 分类 */
+.type-container {
+    height: 100%;
+    border: 1px solid #999;
+}
+
+.type-list {
+    list-style-type: none;
+}
+.type-list li {
+    padding: 5px 0;
+}
+.type-list li:nth-child(odd) {
+    background-color: #f7f6f2;
+}
+
+.type-name {
+    font-size: 20px;
+}
+
+.type-count {
+    font-size: 15px;
+    color: #999;
+    float: right;
+    line-height: 30px;
+}
+
+/* 跑马灯 */
+.marquee {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee ul {
+    margin: 0;
+    width: 99999px;
+    transition: all 0.5s;
+    height: 100%;
+    animation: marginLeft 10.5s infinite;
+}
+
+.marquee ul li {
+    height: 100%;
+    float: left;
+}
+
+.marquee ul li img {
+    width: 580px;
+}
+
+@keyframes marginLeft {
+    0% {
+        margin-left: 0;
+    }
+
+    28.5% {
+        margin-left: 0;
+    }
+
+    33.3% {
+        margin-left: -580px;
+    }
+
+    62% {
+        margin-left: -580px;
+    }
+
+    66.7% {
+        margin-left: -1160px;
+    }
+
+    95.2% {
+        margin-left: -1160px;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+/* 资讯 */
+.infos {
+    height: 100%;
+    background-color: #f5faf8;
+    border: 1px solid #999;
+}
+
+.infos h4{
+    text-align: center;
+}
+
+.infos li {
+    padding: 10px 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
