@@ -11,6 +11,6 @@ create table book(
     intro TEXT,
     cover_url varchar(200),
     tid int not null,
-    constraint FK_book_tid foreign key(tid) reference book_type(tid)
+    constraint FK_book_tid foreign key(tid) references book_type(tid)
 );
 
