@@ -35,7 +35,7 @@ a:hover {
 }
 /* 搜索框 */
 .search-container{
-    width: 40%;
+    width: 80% ;
     border: 1px solid #999;
     height: 50px;
     line-height: 50px;
