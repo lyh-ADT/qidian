@@ -4,7 +4,7 @@ create table book_type(
 );
 
 create table book(
-    bid int primary key,
+    bid int primary key auto_increment,
     bname varchar(200) not null,
     author varchar(200) not null,
     short_intro varchar(200),
