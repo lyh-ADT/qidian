@@ -28,6 +28,31 @@ a:hover {
     width: 20%;
 }
 
+.nav{
+    margin-top: 50px;
+    height: 100px;
+    padding: 5px;
+}
+/* 搜索框 */
+.search-container{
+    width: 40%;
+    border: 1px solid #999;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 0px 2px 2px;
+}
+.search-container>input{
+    width: 70%;
+    /* height: 100%; */
+    border: 0;
+    outline: medium;
+}
+.search-container>button{
+    width: 29%;
+    height: 100%;
+    border: 0;
+}
+
 /* 第一部分 */
 .container > .center {
     width: 58%;
