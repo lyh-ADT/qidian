@@ -140,3 +140,48 @@ a:hover {
     overflow: hidden;
     white-space: nowrap;
 }
+
+.col5-list {
+    height: 300px;
+}
+
+.col5-list>.book-list{
+    float: left;
+    width: 15%;
+}
+.book-list{
+    height: 100%;
+    margin: 0 5px;
+}
+.book-list ul {
+    list-style-type: none;
+}
+.book-list li {
+    border-bottom: 1px solid #999;
+    margin: 5px 0;
+}
+
+.book-list .rank{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    line-height: 1em;
+}
+
+.book-list .rank{
+    background-color: rgb(219, 219, 219);
+    color: rgb(70, 70, 70);
+}
+.book-list li:nth-child(1) .rank{
+    background-color: red;
+    color: white;
+}
+.book-list li:nth-child(2) .rank{
+    background-color: rgb(255, 136, 0);
+    color: white;
+}
+.book-list li:nth-child(3) .rank{
+    background-color: rgb(251, 255, 0);
+    color: white;
+}
