@@ -223,3 +223,53 @@ a:hover {
     background-color: rgb(251, 255, 0);
     color: white;
 }
+
+/* 书架列表 */
+.shell-list{
+    height: 350px;
+    background-color: aqua;
+    clear: both;
+}
+
+.shell-list>.bookshell{
+    float: left;
+}
+.shell-list>.book-list{
+    float: right;
+    width: 250px;
+}
+
+.bookshell{
+    width: 900px;
+    height: 100%;
+}
+
+.col-image{
+    height: 100%;
+    overflow: hidden;
+}
+.col-image>img{
+    height: 100%;
+}
+
+.bookshell .col-image, .bookshell .shell{
+    float: left;
+}
+
+.bookshell .col-image{
+    width: 200px;
+}
+.bookshell .shell{
+    width: 700px;
+    height: 300px;
+}
+.bookshell .shell .book{
+    float: left;
+    width: 45%;
+    height: 30%;
+    margin: 2px;
+}
+
+.bookshell .shell .book .col-image{
+    width: 30%;
+}
