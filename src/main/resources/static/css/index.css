@@ -235,7 +235,6 @@ a:hover {
 /* 书架列表 */
 .shell-list{
     height: 350px;
-    background-color: aqua;
     clear: both;
 }
 
@@ -275,7 +274,12 @@ a:hover {
     float: left;
     width: 45%;
     height: 30%;
-    margin: 2px;
+    margin: 1% 2%;
+}
+
+.bookshell .shell .book p{
+    color: #999;
+    font-size: 13px;
 }
 
 .bookshell .shell .book .col-image{
