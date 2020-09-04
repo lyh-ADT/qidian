@@ -1,6 +1,7 @@
 package com.zll.qidian.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,5 +29,10 @@ public class RankController {
 			nums = 10;
 		}
 		return rankService.getRandomBooks(nums);
+	}
+	
+	@GetMapping("/ranks")
+	public List<Map<String, Object>> getRanks() {
+		return rankService.getRanks();
 	}
 }
