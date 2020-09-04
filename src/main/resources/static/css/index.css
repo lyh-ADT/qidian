@@ -28,6 +28,11 @@ a:hover {
     width: 20%;
 }
 
+.container > .center {
+    width: 59.6%;
+}
+
+
 .nav{
     margin-top: 50px;
     height: 100px;
@@ -57,7 +62,8 @@ a:hover {
 .my-bookshell-btn {
     border-radius: 10px;
     border: 1px solid rgb(123,199,51);
-    padding: 15px;
+    padding: 10px;
+    margin: 0 25px;
     text-align: center;
     cursor: pointer;
     background-image: linear-gradient(to right, rgb(182, 221, 146) , rgb(255, 255, 151));
@@ -67,10 +73,6 @@ a:hover {
 }
 
 /* 第一部分 */
-.container > .center {
-    width: 58%;
-}
-
 .container.head{
     height: 500px;
 }
