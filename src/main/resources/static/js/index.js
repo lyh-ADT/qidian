@@ -48,4 +48,21 @@ const bookShellVue = new Vue({
             }
         });
     }
+});
+
+const shellRankVue = new Vue({
+    el: "#shell-rank",
+    data: {
+        books: []
+    },
+    mounted: () => {
+        $.ajax({
+            url: "/rank/random?nums=12",
+            method: "GET",
+            type: "json",
+            success:(data) => {
+                shellRankVue.books = data;
+            }
+        });
+    }
 })
