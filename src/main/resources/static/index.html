@@ -17,7 +17,7 @@
         </div>
         
         <div class="right-side">
-            <div class="my-bookshell-btngit">
+            <div class="my-bookshell-btn">
                 我的书架
             </div>
         </div>
@@ -25,13 +25,11 @@
     <div class="container head">
         <div class="left-side type-container">
             <h4>分类</h4>
-            <ul class="type-list">
-                <li>
-                    <a href="javascript:void(0)" class="type-name">分类</a>
-                    <span class="type-count">25346</span>
+            <ul class="type-list" id="type-list">
+                <li v-for="type in types">
+                    <a href="javascript:void(0)" class="type-name">{{type.tname}}</a>
+                    <span class="type-count">{{type.tid}}</span>
                 </li>
-                <li>a</li>
-                <li>a</li>
             </ul>
         </div>
         <div class="center marquee">
@@ -182,5 +180,6 @@
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
