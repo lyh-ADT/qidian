@@ -74,55 +74,15 @@
                 <div class="col-image">
                     <img src="http://bookcover.yuewen.com/qdbimg/349573/1012495547/90" alt="">
                 </div>
-                <div class="shell">
-                    <div class="book">
+                <div class="shell" id="book-shell">
+                    <div class="book" v-for="book in books">
                         <div class="col-image">
-                            <img src="http://bookcover.yuewen.com/qdbimg/349573/1012495547/90" alt="">
+                            <img :src="book.cover_url" alt="">
                         </div>
                         <div>
-                            <h4>标题</h4>
-                            <p>简介</p>
-                            <span>作者</span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <div class="col-image">
-                            <img src="http://bookcover.yuewen.com/qdbimg/349573/1012495547/90" alt="">
-                        </div>
-                        <div>
-                            <h4>标题</h4>
-                            <p>简介</p>
-                            <span>作者</span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <div class="col-image">
-                            <img src="http://bookcover.yuewen.com/qdbimg/349573/1012495547/90" alt="">
-                        </div>
-                        <div>
-                            <h4>标题</h4>
-                            <p>简介</p>
-                            <span>作者</span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <div class="col-image">
-                            <img src="http://bookcover.yuewen.com/qdbimg/349573/1012495547/90" alt="">
-                        </div>
-                        <div>
-                            <h4>标题</h4>
-                            <p>简介</p>
-                            <span>作者</span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <div class="col-image">
-                            <img src="http://bookcover.yuewen.com/qdbimg/349573/1012495547/90" alt="">
-                        </div>
-                        <div>
-                            <h4>标题</h4>
-                            <p>简介</p>
-                            <span>作者</span>
+                            <h4>{{book.bname}}</h4>
+                            <p>{{book.short_intro}}</p>
+                            <span>{{book.author}}</span>
                         </div>
                     </div>
                 </div>

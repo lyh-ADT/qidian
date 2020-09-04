@@ -6,13 +6,13 @@ public class Book {
 	private String author;
 	private String short_intro;
 	private String intro;
-	private String conver_url;
+	private String cover_url;
 	private Integer tid;
 	
 	@Override
 	public String toString() {
 		return "Book [bid=" + bid + ", bname=" + bname + ", author=" + author + ", short_intro=" + short_intro
-				+ ", intro=" + intro + ", conver_url=" + conver_url + ", tid=" + tid + "]";
+				+ ", intro=" + intro + ", cover_url=" + cover_url + ", tid=" + tid + "]";
 	}
 	public Integer getBid() {
 		return bid;
@@ -44,11 +44,11 @@ public class Book {
 	public void setIntro(String intro) {
 		this.intro = intro;
 	}
-	public String getConver_url() {
-		return conver_url;
+	public String getCover_url() {
+		return cover_url;
 	}
-	public void setConver_url(String conver_url) {
-		this.conver_url = conver_url;
+	public void setCover_url(String conver_url) {
+		this.cover_url = conver_url;
 	}
 	public Integer getTid() {
 		return tid;

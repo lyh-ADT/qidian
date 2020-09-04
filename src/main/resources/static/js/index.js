@@ -30,4 +30,22 @@ const col5BookListVue = new Vue({
             }
         })
     }
+});
+
+const bookShellVue = new Vue({
+    el: "#book-shell",
+    data:{
+        books: []
+    },
+    mounted: () => {
+
+        $.ajax({
+            url: "/rank/random?nums=6",
+            method: "GET",
+            type: "json",
+            success:(data) => {
+                bookShellVue.books = data;
+            }
+        });
+    }
 })
