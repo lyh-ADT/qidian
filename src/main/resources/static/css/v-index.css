@@ -1,0 +1,38 @@
+.container {
+    width: 100%;
+}
+
+.container > .left-side, .container > .center, .container > .right-side {
+    float: none;
+}
+
+.container > .left-side, .container > .right-side, .container > .center {
+    width: 100%;
+}
+
+.nav{
+    height: auto;
+}
+
+.container.head {
+    height: auto;
+}
+.marquee{
+    display: none;
+}
+.shell-list{
+    height: auto;
+}
+.shell-list>.bookshell {
+    width: 100%;
+    float: none;
+}
+.shell-list>.book-list{
+    float: none;
+}
+.bookshell>div>.col-image{
+    display: none;
+}
+.bookshell .shell{
+    width: 100%;
+}
