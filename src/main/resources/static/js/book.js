@@ -14,3 +14,22 @@ function selectTab(li, tabId){
     $("#"+tabId).css("display", "block");
     $(li).addClass("active");
 }
+
+const bookId = /id=(\d+)/.exec(location.search)[1];
+
+const bookDetailVue = new Vue({
+    el: "#book",
+    data: {
+        "book":{}
+    },
+    mounted: () => {
+        $.ajax({
+            url: `/book/${bookId}`,
+            method: "GET",
+            type: "json",
+            success: (data) => {
+                bookDetailVue.book = data;
+            }
+        })
+    }
+})

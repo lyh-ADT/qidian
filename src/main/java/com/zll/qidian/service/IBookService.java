@@ -1,15 +1,8 @@
-package com.zll.qidian.mapper;
-
-import java.util.List;
-
-import org.apache.ibatis.annotations.Mapper;
+package com.zll.qidian.service;
 
 import com.zll.qidian.bean.Book;
 
-@Mapper
-public interface IBookMapper {
-	List<Book> getAllBooks();
-
+public interface IBookService {
 	/**
 	 * 根据书籍编号返回书籍信息
 	 * @param bookId 书籍编号

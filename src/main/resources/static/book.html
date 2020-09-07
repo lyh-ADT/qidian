@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="css/book.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="book">
         <div id="book-detail">
             <div class="left-side col-image">
-                <img src="http://bookcover.yuewen.com/qdbimg/349573/1012495547/90" alt="">
+                <img :src="book.cover_url" alt="">
             </div>
             <div class="center title-area">
                 <div class="title-row">
-                    <span class="book-title">书籍标题</span>
-                    <span class="author">书籍作者&nbsp;著</span>
+                    <span class="book-title">{{book.bname}}</span>
+                    <span class="author">{{book.author}}&nbsp;著</span>
                 </div>
                 <div class="intro-row">
-                    <p>书籍介绍</p>
+                    <p>{{book.short_intro}}</p>
                 </div>
                 <div class="info-row">
                     <span class="num">345.1</span>
@@ -48,7 +48,7 @@
             </ul>
             <div id="book-info" style="display: none;">
                 <div>
-                    <p>简介</p>
+                    <p>{{book.intro}}</p>
                     <hr>
                 </div>
                 <div>
@@ -56,16 +56,7 @@
             </div>
             <div id="book-volume">
                 <ul>
-                    <li>第一章</li>
-                    <li>第一章</li>
-                    <li>第一章</li>
-                    <li>第一章</li>
-                    <li>第一章</li>
-                    <li>第一章</li>
-                    <li>第一章</li>
-                    <li>第一章</li>
-                    <li>第一章</li>
-                    <li>第一章</li>
+                    <li v-for="index in Math.round(Math.random()*500)">第{{index}}章</li>
                 </ul>
             </div>
         </div>
