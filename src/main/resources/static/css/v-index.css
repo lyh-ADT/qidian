@@ -2,11 +2,11 @@
     width: 100%;
 }
 
-.container > .left-side, .container > .center, .container > .right-side {
+.left-side, .center, .right-side {
     float: none;
 }
 
-.container > .left-side, .container > .right-side, .container > .center {
+.left-side,  .right-side, .center {
     width: 100%;
 }
 
