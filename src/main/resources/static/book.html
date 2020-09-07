@@ -43,10 +43,10 @@
         </div>
         <div>
             <ul class="tab-list">
-                <li onclick="selectTab(this, 'book-info');">作品信息</li>
-                <li onclick="selectTab(this, 'book-volume');" class="active">章节信息</li>
+                <li onclick="selectTab(this, 'book-info');" class="active">作品信息</li>
+                <li onclick="selectTab(this, 'book-volume');">章节信息</li>
             </ul>
-            <div id="book-info" style="display: none;">
+            <div id="book-info">
                 <div>
                     <p>{{book.intro}}</p>
                     <hr>
@@ -54,7 +54,7 @@
                 <div>
                 </div>
             </div>
-            <div id="book-volume">
+            <div id="book-volume" style="display: none;">
                 <ul>
                     <li v-for="index in Math.round(Math.random()*500)">第{{index}}章</li>
                 </ul>
