@@ -48,3 +48,46 @@
     border-color: rgb(190, 0, 0);
     color: white;
 }
+
+.comment-count>div:first-child {
+    font-size: 30px;
+    font-weight: 500;
+}
+.comment-count>div:last-child {
+    font-size: 8px;
+    color: #999;
+}
+
+.tab-list {
+    margin-top: 30px;
+    list-style-type: none;
+    height: 50px;
+}
+.tab-list li {
+    float: left;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.tab-list li.active {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+#book-info>div:first-child {
+    float: left;
+    width: 60%;
+}
+#book-info>div:last-child {
+    float: right;
+    width: 30%;
+}
+
+#book-volume ul {
+    list-style-type: none;
+}
+#book-volume ul li {
+    float: left;
+    width: 30%;
+    border-bottom: 1px solid #AAA;
+    padding: 10px 0;
+}
