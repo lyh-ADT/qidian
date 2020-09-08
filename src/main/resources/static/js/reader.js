@@ -50,3 +50,26 @@ window.onscroll = function(e) {
 }
 
 loadNextChapter();
+
+// 移动端显示和隐藏菜单
+function initMobileMenu() {
+    function isOnScreenCenter(x, y, offset=100) {
+        const screenHorizonMid = window.innerWidth / 2;
+        const screenVerticalMid = window.innerHeight / 2;
+
+        return Math.abs(screenHorizonMid - x) <= offset && Math.abs(screenVerticalMid - y) <= offset;
+
+    }
+    const menu = document.getElementById("menu");
+    let isShowing = false;
+    window.onclick = function(ev){
+        if(!isOnScreenCenter(ev.x, ev.y)){
+            return;
+        }
+        menu.style.display = isShowing ? "none" : "block";
+        isShowing = !isShowing;
+    }
+}
+if(window.innerWidth <= 800){
+    initMobileMenu();
+}

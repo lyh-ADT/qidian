@@ -1,0 +1,18 @@
+#menu {
+    top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: none;
+}
+#menu ul {
+    display: block;
+}
+#menu ul li {
+    float: left;
+    width: calc( 20% - 2px );
+}
+
+#content {
+    margin: 0;
+}
