@@ -1,3 +1,9 @@
+document.getElementById("search-input").onkeydown = (ev) => {
+    if(ev.keyCode === 13){
+        search();
+    }
+}
+
 function search() {
     const key = $("#search-input").val();
     let search = "";
