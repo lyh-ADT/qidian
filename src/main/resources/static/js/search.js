@@ -1,6 +1,28 @@
 function search() {
     const key = $("#search-input").val();
-    console.log(key);
+    let search = "";
+    if(location.search == ""){
+        search = "?key="+key;
+    } else {
+        const pos = location.search.indexOf("key=");
+        if(pos === -1) {
+            search = location.search + "&key" + key;
+        } else {
+            if(key == "") {
+                search = location.search;
+            } else {
+                search = location.search.replace(/key=.*?(?=(&|$))/, "key="+key);
+            }
+        }
+    }
+    $.ajax({
+        url: "/book/search"+search,
+        method: "GET",
+        type: "json",
+        success:(data) => {
+            bookSearchListVue.setBooks(data);
+        }
+    });
 }
 
 const bookSearchListVue = new Vue({
@@ -8,15 +30,10 @@ const bookSearchListVue = new Vue({
     data:{
         books: []
     },
-    mounted: () => {
-        $.ajax({
-            url: "/rank/random?nums=16",
-            method: "GET",
-            type: "json",
-            success:(data) => {
-                bookSearchListVue.books = data;
-            }
-        });
+    methods:{
+        setBooks: (books) => {
+            bookSearchListVue.$data.books = books;
+        }
     }
 });
 
@@ -36,3 +53,5 @@ const shellRankVue = new Vue({
         });
     }
 });
+
+search();
