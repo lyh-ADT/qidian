@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>书籍详情</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link media="only screen and (max-width:800px)" rel="stylesheet" href="css/v-index.css">
+    <link rel="stylesheet" href="css/book.css">
+    <link media="only screen and (max-width:800px)" rel="stylesheet" href="css/v-book.css">
+</head>
+<body>
+    <div class="container" id="book">
+        <div id="book-detail">
+            <div class="left-side col-image">
+                <img :src="book.cover_url" alt="">
+            </div>
+            <div class="center title-area">
+                <div class="title-row">
+                    <span class="book-title">{{book.bname}}</span>
+                    <span class="author">{{book.author}}&nbsp;著</span>
+                </div>
+                <div class="intro-row">
+                    <p>{{book.short_intro}}</p>
+                </div>
+                <div class="info-row">
+                    <span class="num">345.1</span>
+                    万字&nbsp;|
+                    <span class="num">74</span>
+                    万总推荐&nbsp;|
+                    <span class="num">23.8</span>
+                    周推荐
+                </div>
+                <div class="operation-row">
+                    <button class="btn red" onclick="location.href=`/reader.html?id=${bookId}`">免费试读</button>
+                    <button class="btn">加入书架</button>
+                </div>
+            </div>
+            <div class="right-side comment-count">
+                <div>0.0</div>
+                <div>人评价</div>
+            </div>
+        </div>
+        <div>
+            <ul class="tab-list">
+                <li onclick="selectTab(this, 'book-info');" class="active">作品信息</li>
+                <li onclick="selectTab(this, 'book-volume');">章节信息</li>
+            </ul>
+            <div id="book-info">
+                <div>
+                    <p>{{book.intro}}</p>
+                    <hr>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div id="book-volume" style="display: none;">
+                <ul>
+                    <li v-for="index in Math.round(Math.random()*500)">第{{index}}章</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;">&nbsp;</div>
+    <footer>
+        <div class="foot_link">
+            <a href="#">关于我们</a> <span> | </span>
+            <a href="#">联系我们</a> <span> | </span>
+            <a href="#">招聘广告</a> <span> | </span>
+            <a href="#">友情链接</a>
+        </div>
+        <p>CopyRight &copy; 2019 <a class="copy" href="http://www.hyycinfo.com" target="_blank">衡阳市源辰信息科技有限公司</a> All Rights Reserverd</p>
+        <p>电话：0734-8355998 湘ICP备16015987号-1</p>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/book.js"></script>
+</body>
+</html>

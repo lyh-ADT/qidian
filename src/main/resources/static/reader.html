@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阅读</title>
+    <link rel="stylesheet" href="css/reader.css">
+    <link media="only screen and (max-width:800px)" rel="stylesheet" href="css/v-reader.css">
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>目录</li>
+            <li>书页</li>
+            <li>手机</li>
+            <li>书架</li>
+            <li>书架</li>
+        </ul>
+    </div>
+    <div id="content">
+        <div class="index volume">
+            <img :src="book.cover_url" alt="书籍封面">
+            <h2>{{book.bname}}</h2>
+            <h4>{{book.author}}</h4>
+            <p>{{book.intro}}</p>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/bullshit-genertator.js"></script>
+    <script src="js/reader.js"></script>
+</body>
+</html>
