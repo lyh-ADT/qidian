@@ -22,11 +22,14 @@
 
 #content {
     margin:0 10%;
-
 }
 #content > div {
     box-shadow: 3px 3px 15px black;
     background-color: #F6F1E7;
+}
+
+.index {
+    text-align: center;
 }
 
 #content p {
