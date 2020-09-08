@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link media="only screen and (max-width:800px)" rel="stylesheet" href="css/v-index.css">
+</head>
+<body>
+    <div class="nav container">
+        <div class="left-side">
+            &nbsp;
+        </div>
+        <div class="center">
+            <div class="search-container">
+                <input type="text" placeholder="搜索框" id="search-input">
+                <button onclick="search()">搜索</button>
+            </div>
+        </div>
+        
+        <div class="right-side">
+            <div class="my-bookshell-btn">
+                我的书架
+            </div>
+        </div>
+    </div>
+
+    <div class="container shell-list">
+        <div class="bookshell">
+            <h3>书架</h3>
+            <hr color="black">
+            <div style="height: 90%;">
+                <div class="col-image">
+                    <img src="http://bookcover.yuewen.com/qdbimg/349573/1012495547/90" alt="">
+                </div>
+                <div class="shell" id="book-shell">
+                    <div class="book" v-for="book in books">
+                        <div class="col-image">
+                            <img :src="book.cover_url" alt="">
+                        </div>
+                        <div>
+                            <h4><a :href="'/book.html?id='+book.bid">{{book.bname}}</a></h4>
+                            <p>{{book.short_intro}}</p>
+                            <span>{{book.author}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="book-list">
+            <h3>月票榜·新书</h3>
+            <hr color="black">
+            <ul id="shell-rank">
+                <li class="book" v-for="(book, index) in books">
+                    <span class="rank">{{index + 1}}</span>
+                    <span class="book-name"><a :href="'/book.html?id='+book.bid">{{book.bname}}</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

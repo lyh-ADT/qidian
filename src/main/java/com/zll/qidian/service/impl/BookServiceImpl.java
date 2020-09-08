@@ -1,5 +1,7 @@
 package com.zll.qidian.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,11 @@ public class BookServiceImpl implements IBookService {
 	@Override
 	public Book getBookById(Integer bookId) {
 		return bookMapper.getBookById(bookId);
+	}
+
+	@Override
+	public List<Book> search(String bookKey, Integer tid) {
+		return bookMapper.search(bookKey, tid);
 	}
 
 }
