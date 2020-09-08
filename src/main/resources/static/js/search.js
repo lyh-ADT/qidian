@@ -12,7 +12,7 @@ function search() {
     } else {
         const pos = location.search.indexOf("key=");
         if(pos === -1) {
-            search = location.search + "&key" + key;
+            search = location.search + "&key=" + key;
         } else {
             if(key == "") {
                 search = location.search;
