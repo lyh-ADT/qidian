@@ -1,0 +1,8 @@
+#email-box > input {
+    width: 65%;
+}
+#email-box > button {
+    width: 25%;
+    border: 0;
+    height: 100%;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+    
+<mapper namespace="com.zll.qidian.mapper.IAccountMapper">
+    <select id="getAccountById" resultType="com.zll.qidian.bean.Account">
+        select * from account where aid=#{aid}
+    </select>
+    
+    <select id="login" parameterType="com.zll.qidian.bean.Account" resultType="com.zll.qidian.bean.Account">
+        select * from account
+        <where>
+            <if test="email != null and email != ''">
+                email = #{email}
+            </if>
+            <if test="aid != null and aid != ''">
+                aid = #{aid}
+            </if>
+            and pwd = md5(#{pwd})
+        </where>
+    </select>
+    
+    <select id="add" resultType="int">
+        insert into account values(0, #{aname}, md5(#{pwd}), #{email})
+    </select>
+</mapper>

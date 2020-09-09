@@ -14,3 +14,9 @@ create table book(
     constraint FK_book_tid foreign key(tid) references book_type(tid)
 );
 
+create table account(
+    aid int primary key auto_increment,
+    aname varchar(200) not null,
+    pwd varchar(100) not null,
+    email varchar(200) not null unique
+);
