@@ -1,7 +1,10 @@
 package com.zll.qidian.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
+
 import com.zll.qidian.bean.Account;
 
+@Mapper
 public interface IAccountMapper {
 	/**
 	 * 根据账号编号查询账号

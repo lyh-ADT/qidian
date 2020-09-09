@@ -6,7 +6,22 @@ const loginVue = new Vue({
     },
     methods: {
         login: function(){
-            console.log(loginVue.aid)
+            $.ajax({
+                url: "account",
+                method: "POST",
+                data: JSON.stringify({
+                    email: loginVue.aid,
+                    pwd: loginVue.pwd
+                }),
+                contentType: "application/json",
+                success: function(message){
+                    if(message == "success"){
+                        location.href = "index.html";
+                        return;
+                    }
+                    alert(message);
+                }
+            })
         }
     }
 })
