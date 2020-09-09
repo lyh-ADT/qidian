@@ -12,12 +12,12 @@
         <div class="left img-box">
             <img src="https://sta.gtimg.com/qd6/images/loginBg.jpg" alt="">
         </div>
-        <div class="right login-box">
+        <div class="right login-box" id="login-box">
             <div class="input">
-                <input type="text" placeholder="账号">
+                <input type="text" placeholder="账号" v-model="aid">
             </div>
             <div class="input">
-                <input type="password" placeholder="密码">
+                <input type="password" placeholder="密码" v-model="pwd">
             </div>
             <div class="input">
                 <div class="left">
@@ -28,10 +28,13 @@
                 </div>
             </div>
             <div class="input btn" style="clear: both;">
-                <button>登录</button>
+                <button @click="login()">登录</button>
             </div>
 
         </div>
     </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
