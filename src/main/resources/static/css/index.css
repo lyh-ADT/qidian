@@ -16,6 +16,20 @@ a:hover {
     color: blue;
 }
 
+.status-bar {
+    width: 100%;
+    height: 25px;
+    background-color: #EEE;
+}
+.status-bar>ul{
+    height: 98%;
+    list-style-type: none;
+    margin: 0 1%;
+}
+.status-bar>ul>li{
+    float: right;
+}
+
 .container {
     width: 1200px;
 }

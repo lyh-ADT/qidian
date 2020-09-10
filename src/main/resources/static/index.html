@@ -8,6 +8,9 @@
     <link media="only screen and (max-width:800px)" rel="stylesheet" href="css/v-index.css">
 </head>
 <body>
+    <div class="status-bar">
+        <status-bar v-bind:account="account"></status-bar>
+    </div>
     <div class="nav container">
         <div class="left-side">
             &nbsp;
@@ -124,6 +127,8 @@
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/vue.js"></script>
+    <script src="js/check-login.js"></script>
+    <script src="js/v-status-bar.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
