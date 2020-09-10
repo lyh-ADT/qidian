@@ -21,7 +21,7 @@
         </where>
     </select>
     
-    <select id="add" resultType="int">
+    <insert id="add">
         insert into account values(0, #{aname}, md5(#{pwd}), #{email})
-    </select>
+    </insert>
 </mapper>

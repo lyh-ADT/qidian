@@ -15,6 +15,24 @@ function selectTab(li, tabId){
     $(li).addClass("active");
 }
 
+function addBook(bid){
+    $.ajax({
+        url: `/shell/book`,
+        method: "PUT",
+        data: {
+            bid: bid
+        },
+        type: "text",
+        success: (data) => {
+            if(data == "success"){
+                alert("添加成功");
+                return;
+            }
+            alert(data);
+        }
+    })
+}
+
 const bookId = /id=(\d+)/.exec(location.search)[1];
 
 const bookDetailVue = new Vue({
