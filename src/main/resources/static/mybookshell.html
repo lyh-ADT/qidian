@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的书架</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link media="only screen and (max-width:800px)" rel="stylesheet" href="css/v-index.css">
+    <link media="only screen and (max-width:800px)" rel="stylesheet" href="css/v-search.css">
+</head>
+<body>
+
+    <div class="container shell-list">
+        <div class="bookshell" style="width: 100%;">
+            <h3>书架</h3>
+            <hr color="black">
+            <div style="height: 90%;">
+                <div class="shell" id="book-shell" style="width: 100%;">
+                    <div class="book" v-for="book in books">
+                        <div class="col-image">
+                            <img :src="book.cover_url" alt="">
+                        </div>
+                        <div>
+                            <h4><a :href="'/book.html?id='+book.bid">{{book.bname}}</a></h4>
+                            <p>{{book.short_intro}}</p>
+                            <span>{{book.author}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/check-login.js"></script>
+    <script src="js/mybookshell.js"></script>
+</body>
+</html>

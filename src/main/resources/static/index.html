@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link media="only screen and (max-width:800px)" rel="stylesheet" href="css/v-index.css">
+</head>
+<body>
+    <div class="nav container">
+        <div class="left-side">
+            &nbsp;
+        </div>
+        <div class="center">
+            <div class="search-container">
+                <input type="text" placeholder="搜索框">
+                <button>搜索</button>
+            </div>
+        </div>
+        
+        <div class="right-side">
+            <div class="my-bookshell-btn">
+                <a href="mybookshell.html" target="_blank">我的书架</a>
+            </div>
+        </div>
+    </div>
+    <div class="container head">
+        <div class="left-side type-container">
+            <h4>分类</h4>
+            <ul class="type-list" id="type-list">
+                <li v-for="type in types">
+                    <a :href="`/search.html?type=${type.tid}`" class="type-name">{{type.tname}}</a>
+                    <span class="type-count">{{type.tid}}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="center marquee">
+            <ul>
+                <li><img src="http://bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/7a252584150962528ae3c5ebec79d879.jpeg" alt=""></li>
+                <li><img src="http://bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/7a252584150962528ae3c5ebec79d879.jpeg" alt=""></li>
+                <li><img src="http://bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/7a252584150962528ae3c5ebec79d879.jpeg" alt=""></li>
+            </ul>
+            <img src="http://bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/7d7754802103c7ba3d136846e112ba7f.png" alt="">
+            <img src="http://bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/7d7754802103c7ba3d136846e112ba7f.png" alt="">
+            <img src="http://bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/7d7754802103c7ba3d136846e112ba7f.png" alt="">
+        </div>
+        <div class="right-side infos">
+            <h4>资讯</h4>
+            <ul>
+                <li><a href="javascript:void(0)">「资讯」巫马行新书重磅来</a></li>
+                <li><a href="javascript:void(0)">「资讯」奶骑新书：万界点...</a></li>
+                <li><a href="javascript:void(0)">「资讯」NI世界遗产征文</a></li>
+                <li><a href="javascript:void(0)">「资讯」巫马行新书重磅来</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container banner">
+        <img src="https://bossaudioandcomic-1252317822.image.myqcloud.com/activity/document/141841ca350aef7afc245e3439abeeca.jpg" alt="">
+    </div>
+
+    <div class="container col5-list" id="col5-book-list">
+        <div class="book-list" v-for="list in lists">
+            <h3>{{list.name}}</h3>
+            <hr color="black">
+            <ul>
+                <li class="book" v-for="(book, index) in list.list">
+                    <span class="rank">{{index + 1}}</span>
+                    <span class="book-name"><a :href="'/book.html?id='+book.bid">{{book.bname}}</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container banner">
+        <img src="https://img2.qidian.com/upload/gamesy/2020/09/02/20200902173719cnxyhkqh9l.jpg" alt="">
+    </div>
+
+    <div class="container shell-list">
+        <div class="bookshell">
+            <h3>书架</h3>
+            <hr color="black">
+            <div style="height: 90%;">
+                <div class="col-image">
+                    <img src="http://bookcover.yuewen.com/qdbimg/349573/1012495547/90" alt="">
+                </div>
+                <div class="shell" id="book-shell">
+                    <div class="book" v-for="book in books">
+                        <div class="col-image">
+                            <img :src="book.cover_url" alt="">
+                        </div>
+                        <div>
+                            <h4><a :href="'/book.html?id='+book.bid">{{book.bname}}</a></h4>
+                            <p>{{book.short_intro}}</p>
+                            <span>{{book.author}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="book-list">
+            <h3>月票榜·新书</h3>
+            <hr color="black">
+            <ul id="shell-rank">
+                <li class="book" v-for="(book, index) in books">
+                    <span class="rank">{{index + 1}}</span>
+                    <span class="book-name"><a :href="'/book.html?id='+book.bid">{{book.bname}}</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot_link">
+            <a href="#">关于我们</a> <span> | </span>
+            <a href="#">联系我们</a> <span> | </span>
+            <a href="#">招聘广告</a> <span> | </span>
+            <a href="#">友情链接</a>
+        </div>
+        <p>CopyRight &copy; 2019 <a class="copy" href="http://www.hyycinfo.com" target="_blank">衡阳市源辰信息科技有限公司</a> All Rights Reserverd</p>
+        <p>电话：0734-8355998 湘ICP备16015987号-1</p>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

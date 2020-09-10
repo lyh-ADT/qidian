@@ -1,0 +1,7 @@
+#book-detail {
+    height: 100%;
+}
+#book-info>div{
+    float: none !important;
+    width: 100% !important;
+}

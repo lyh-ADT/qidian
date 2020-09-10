@@ -1,0 +1,291 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+html, body{
+    width: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+.container {
+    width: 1200px;
+}
+
+.left-side, .center, .right-side {
+    float: left;
+}
+
+.left-side, .right-side {
+    width: 20%;
+}
+
+.center {
+    width: 59.6%;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.nav{
+    margin-top: 50px;
+    height: 100px;
+    padding: 5px;
+}
+/* 搜索框 */
+.search-container{
+    width: 80% ;
+    border: 1px solid #999;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 0px 2px 2px;
+}
+.search-container>input{
+    width: 70%;
+    /* height: 100%; */
+    border: 0;
+    outline: medium;
+}
+.search-container>button{
+    width: 28%;
+    height: 100%;
+    border: 0;
+}
+
+/* 我的书架 */
+.my-bookshell-btn {
+    border-radius: 10px;
+    border: 1px solid rgb(123,199,51);
+    padding: 10px;
+    margin: 0 25px;
+    text-align: center;
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(182, 221, 146) , rgb(255, 255, 151));
+}
+.my-bookshell-btn:hover{
+    background-image: linear-gradient(to left, rgb(182, 221, 146) , rgb(255, 255, 151));
+}
+
+/* 第一部分 */
+.container.head{
+    height: 500px;
+}
+
+/* 分类 */
+.type-container {
+    height: 100%;
+    border: 1px solid #999;
+}
+
+.type-list {
+    list-style-type: none;
+}
+.type-list li {
+    padding: 5px 0;
+}
+.type-list li:nth-child(odd) {
+    background-color: #f7f6f2;
+}
+
+.type-name {
+    font-size: 20px;
+}
+
+.type-count {
+    font-size: 15px;
+    color: #999;
+    float: right;
+    line-height: 30px;
+}
+
+/* 跑马灯 */
+.marquee {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.marquee ul {
+    margin: 0;
+    width: 99999px;
+    transition: all 0.5s;
+    height: auto;
+    animation: marginLeft 10.5s infinite;
+}
+
+.marquee > img {
+    width: 30%;
+}
+
+.marquee ul li {
+    height: 100%;
+    float: left;
+}
+
+.marquee ul li img {
+    width: 696px;
+}
+
+@keyframes marginLeft {
+    0% {
+        margin-left: 0;
+    }
+
+    28.5% {
+        margin-left: 0;
+    }
+
+    33.3% {
+        margin-left: -696px;
+    }
+
+    62% {
+        margin-left: -696px;
+    }
+
+    66.7% {
+        margin-left: -1392px;
+    }
+
+    95.2% {
+        margin-left: -1392px;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+/* 资讯 */
+.infos {
+    height: 100%;
+    background-color: #f5faf8;
+    border: 1px solid #999;
+}
+
+.infos h4{
+    text-align: center;
+}
+
+.infos li {
+    padding: 10px 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.col5-list {
+    height: 300px;
+}
+
+.col5-list>.book-list{
+    float: left;
+    width: 18%;
+    margin: 0 1%;
+}
+.book-list{
+    height: 100%;
+}
+.book-list ul {
+    list-style-type: none;
+}
+.book-list li {
+    border-bottom: 1px solid #999;
+    margin: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.book-list .rank{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    line-height: 1em;
+}
+
+.book-list .rank{
+    background-color: rgb(219, 219, 219);
+    color: rgb(70, 70, 70);
+}
+.book-list li:nth-child(1) .rank{
+    background-color: red;
+    color: white;
+}
+.book-list li:nth-child(2) .rank{
+    background-color: rgb(255, 136, 0);
+    color: white;
+}
+.book-list li:nth-child(3) .rank{
+    background-color: rgb(251, 255, 0);
+    color: white;
+}
+
+.book-list .book-name{
+    white-space: nowrap;
+}
+
+/* 书架列表 */
+.shell-list{
+    height: 350px;
+    clear: both;
+}
+
+.shell-list>.bookshell{
+    float: left;
+}
+.shell-list>.book-list{
+    float: right;
+    width: 250px;
+}
+
+.bookshell{
+    width: 900px;
+    height: 100%;
+}
+
+.col-image{
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.col-image>img{
+    height: 100%;
+}
+
+.bookshell .col-image, .bookshell .shell{
+    float: left;
+}
+
+.bookshell .col-image{
+    width: 200px;
+}
+.bookshell .shell{
+    width: 700px;
+    height: 300px;
+}
+.bookshell .shell .book{
+    float: left;
+    width: 45%;
+    height: 30%;
+    margin: 1% 2%;
+}
+
+.bookshell .shell .book p{
+    color: #999;
+    font-size: 13px;
+}
+
+.bookshell .shell .book .col-image{
+    width: 30%;
+}
