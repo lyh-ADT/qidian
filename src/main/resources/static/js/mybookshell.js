@@ -9,6 +9,9 @@ const bookSearchListVue = new Vue({
         }
     }
 });
+
+checkLogin();
+
 $.ajax({
     url: "/shell/books",
     method: "GET",

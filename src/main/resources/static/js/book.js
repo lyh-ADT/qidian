@@ -15,7 +15,14 @@ function selectTab(li, tabId){
     $(li).addClass("active");
 }
 
+checkLogin(null);
+
 function addBook(bid){
+    if(account == ""){
+        alert("请先登录");
+        window.open("login.html", "_blank");
+        return;
+    }
     $.ajax({
         url: `/shell/book`,
         method: "PUT",
