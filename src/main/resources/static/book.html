@@ -11,6 +11,9 @@
     <link media="only screen and (max-width:800px)" rel="stylesheet" href="css/v-book.css">
 </head>
 <body>
+    <div class="status-bar">
+        <status-bar v-bind:account="account"></status-bar>
+    </div>
     <div class="container" id="book">
         <div id="book-detail">
             <div class="left-side col-image">
@@ -77,6 +80,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/vue.js"></script>
     <script src="js/check-login.js"></script>
+    <script src="js/v-status-bar.js"></script>
     <script src="js/book.js"></script>
 </body>
 </html>
