@@ -10,7 +10,7 @@ const bookSearchListVue = new Vue({
     }
 });
 $.ajax({
-    url: "/rank/random?nums=10",
+    url: "/shell/books",
     method: "GET",
     type: "json",
     success:(data) => {

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+    
+<mapper namespace="com.zll.qidian.mapper.IBookShellMapper">
+    <select id="getBooksByAid" parameterType="int" resultType="com.zll.qidian.bean.Book">
+        select * from book where bid in (select bid from bookshell where aid=#{aid})
+    </select>
+
+    <insert id="add">
+        insert into bookshell values(0, #{aid}, #{bid})
+    </insert>
+</mapper>
